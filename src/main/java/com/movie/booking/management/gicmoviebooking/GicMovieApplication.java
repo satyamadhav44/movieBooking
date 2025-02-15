@@ -16,9 +16,12 @@ public class GicMovieApplication {
     public static int count = 1;
 
     public static void main(String[] args) {
-        boolean movieSelection = true;
         Scanner sc = new Scanner(System.in);
+        beginWorkFlow(sc);
+    }
 
+    public static void beginWorkFlow(Scanner sc) {
+        boolean movieSelection = true;
         do {
             System.out.println(tileAndSeatMapping);
             int rowNumbers = 0;
@@ -47,12 +50,10 @@ public class GicMovieApplication {
                     }
                 } catch (NumberFormatException ex) {
                     System.err.println(validFormat);
-                    //System.out.println(tileAndSeatMapping);
                     continue;
                 }
             }
             System.out.println();
-            //System.out.println();
             //initialize cinema
             Cinema cinema = new Cinema(eachInput[0], rowNumbers, seatNumbers);// Initialize BookingManager with DefaultSeatAllocator
             ISeatAllocator seatAllocator = new SeatAllocator();

@@ -16,7 +16,7 @@ public class SeatAllocator implements ISeatAllocator {
         return allocateSeatsDefault(cinema, ticketCount);
     }
 
-    private List<String> allocateSeatsDefault(Cinema cinema, int ticketCount) {
+    public List<String> allocateSeatsDefault(Cinema cinema, int ticketCount) {
         char[][] seatingMap = cinema.getSeatingMap();
         List<String> allocatedSeats = new ArrayList<>();
         int remainingTickets = ticketCount;
@@ -30,8 +30,7 @@ public class SeatAllocator implements ISeatAllocator {
         return allocatedSeats;
     }
 
-    private List<String> allocateSeatsFromCustomPosition(Cinema cinema, int ticketCount, String customPosition) {
-        char[][] seatingMap = cinema.getSeatingMap();
+    public List<String> allocateSeatsFromCustomPosition(Cinema cinema, int ticketCount, String customPosition) {
         List<String> allocatedSeats = new ArrayList<>();
         int remainingTickets = ticketCount;
 

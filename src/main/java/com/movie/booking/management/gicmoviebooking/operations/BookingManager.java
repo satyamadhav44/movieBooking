@@ -77,10 +77,10 @@ public class BookingManager {
             if (!id.isEmpty()) {
                 if (id.matches("^GIC[0-9]+")) {
                     if (bookingHistory.containsKey(id)) {
-                        System.out.println(bookingId+id);
+                        System.out.println(bookingId + id);
                         System.out.println(selectedSeat);
                         System.out.println();
-                        System.out.printf("%s",screen);
+                        System.out.printf("%s", screen);
                         System.out.println();
                         cinema.displaySeatingMap(id, bookingHistory.get(id));
                         System.out.println();

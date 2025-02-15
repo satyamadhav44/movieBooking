@@ -22,7 +22,7 @@ public class Cinema {
         this.seatsPerRow = seatsPerRow;
         this.seatingMap = new char[rows][seatsPerRow];
         this.availableSeats = rows * seatsPerRow;
-        // Initialize seating map with 'O' (available seats)
+        // Initialize seating map with '.' (available seats)
         for (int i = 0; i < rows; i++) {
             Arrays.fill(seatingMap[i], '.');
         }
